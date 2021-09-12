@@ -1,15 +1,12 @@
 <template>
-  <div>
-
-      user list from api
-
-      
+  <div class="text-center">
+      user list from api      
   </div>
 
 
-<div class="flex flex-wrap px-32 py-10 content-center justify-center w-full">
+<div class="flex flex-wrap content-center justify-center w-full px-32">
   <div v-for="result in data.results"
-  :key="result.id" class="w-1/5 px-5 py-5">
+  :key="result.id" class="px-3 w-1/3 py-5">
 
   <UserCard :data="result" class="content-center justify-center" />
   </div>
