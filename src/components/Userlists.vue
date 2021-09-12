@@ -6,12 +6,17 @@
       
   </div>
 
-  <li 
-  v-for="result in data.results"
-  :key="result.id"
-  >
-    <UserCard :data="result"/>
-  </li>
+
+<div class="flex flex-wrap px-32 py-10 content-center justify-center w-full">
+  <div v-for="result in data.results"
+  :key="result.id" class="w-1/5 px-5 py-5">
+
+  <UserCard :data="result" class="content-center justify-center" />
+  </div>
+
+
+</div>
+
 
   
 </template>
@@ -34,7 +39,7 @@ beforeMount() {
 methods: {
    
   async getUserLists(){
-      const res =  await fetch('https://randomuser.me/api?results=5');
+      const res =  await fetch('https://randomuser.me/api?results=18');
       const data = await res.json();
       this.data = data;
    }   
