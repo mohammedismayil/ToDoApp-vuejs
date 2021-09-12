@@ -1,4 +1,4 @@
-# newapp
+# vuejs-tailwind-app
 
 ## Project setup
 ```
